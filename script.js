@@ -13,7 +13,14 @@ function getComputerChoice() {
 
 //step 3 : getHumanChoice function
 function getHumanChoice() {
-  const humanChoice = prompt("Enter Your Choice").toLowerCase();
+  const humanChoice = prompt(`
+    Enter Your Choice : 
+    - Paper 
+    - Rock
+    - Scissors
+
+    
+    `).toLowerCase().trim();
   if (humanChoice) {
     return humanChoice;
   }
