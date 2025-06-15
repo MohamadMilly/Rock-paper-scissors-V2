@@ -13,7 +13,7 @@ function getComputerChoice() {
 
 //step 3 : getHumanChoice function
 function getHumanChoice() {
-  const humanChoice = prompt(`
+  let humanChoice = prompt(`
     Enter Your Choice : 
     - Paper 
     - Rock
