@@ -2,7 +2,7 @@
 
 // step 2: computerChoice function
 function getComputerChoice() {
-  const probability = Math.floor(Math.random() * 3);
+  const probability = Math.random() * 3;
   if (probability < 1) {
     return "rock";
   } else if (probability < 2) {
@@ -21,10 +21,23 @@ function getHumanChoice() {
 
     
     `);
-  if (humanChoice) {
-    return humanChoice.toLowerCase().trim();
+  if (!humanChoice) {
+    alert("Canclled or empty input , try again.");
+    return getHumanChoice();
   }
-  return;
+
+  humanChoice = humanChoice.toLowerCase().trim();
+
+  if (
+    humanChoice === "rock" ||
+    humanChoice === "paper" ||
+    humanChoice === "scissors"
+  ) {
+    return humanChoice;
+  } else {
+    alert("Enter a valid value !");
+    return getHumanChoice();
+  }
 }
 
 // step 4 : scores variables
@@ -50,14 +63,6 @@ function playRound() {
     computerScore++;
     currentRound++;
     alert("Draw !");
-  } else if (
-    !humanChoice &&
-    humanChoice !== "rock" &&
-    humanChoice !== "paper" &&
-    humanChoice !== "scissors"
-  ) {
-    alert("Enter a valid value !");
-    playRound();
   } else {
     computerScore++;
     currentRound++;
