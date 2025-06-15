@@ -5,7 +5,7 @@ function getComputerChoice() {
   const probability = Math.random() * 3;
   if (probability < 1) {
     return "rock";
-  } else if (propability < 2) {
+  } else if (probability < 2) {
     return "paper";
   }
   return "scissors";
@@ -17,6 +17,7 @@ function getHumanChoice() {
   if (humanChoice) {
     return humanChoice;
   }
+  return;
 }
 
 // step 4 : scores variables
@@ -43,6 +44,7 @@ function playRound() {
     currentRound++;
     alert("Draw !");
   } else if (
+    !humanChoice &&
     humanChoice !== "rock" &&
     humanChoice !== "paper" &&
     humanChoice !== "scissors"
