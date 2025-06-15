@@ -22,7 +22,7 @@ function getHumanChoice() {
     
     `);
   if (!humanChoice) {
-    alert("Canclled or empty input , try again.");
+    alert("Cancelled or empty input , try again.");
     return getHumanChoice();
   }
 
@@ -68,7 +68,6 @@ function playRound() {
     currentRound++;
     alert("Computer Won This Round");
   }
-  console.log(humanChoice, computerChoice);
 }
 // step 6 : the game function
 function playGame() {
