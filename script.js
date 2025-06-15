@@ -2,7 +2,7 @@
 
 // step 2: computerChoice function
 function getComputerChoice() {
-  const probability = Math.random() * 3;
+  const probability = Math.floor(Math.random() * 3);
   if (probability < 1) {
     return "rock";
   } else if (probability < 2) {
@@ -20,9 +20,9 @@ function getHumanChoice() {
     - Scissors
 
     
-    `).toLowerCase().trim();
+    `);
   if (humanChoice) {
-    return humanChoice;
+    return humanChoice.toLowerCase().trim();
   }
   return;
 }
